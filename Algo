@@ -1,10 +1,17 @@
 ALGORITHM analyze_sentence;
+read me file : on va faire dans ce check point : The length of the sentence (the number of characters).
+The number of words in the sentence (assuming that the words are separated by a single space).
+The number of vowels in the sentence.
+ Each character will be treated separately.
+The last character is the point.
+
 VAR
     str:STRING[50]
     i:INTEGER=0
     counter_caracters:INTEGER;
     counter_words:INTEGER;
     counter_vowels:INTEGER;
+   // counter_vowels:INTEGER;
 BEGIN
     counter_caracters:=1;
     counter_words:=1;
@@ -18,11 +25,14 @@ BEGIN
             counter_words:= counter_words +1;
         END_IF
         IF (str[i] in ['a', 'e', 'i', 'o', 'u' , 'y'] ) THEN
-            counter_vowels:= counter_vowels +1;
+        //IF IF (str[i] in ['a', 'e', 'i', 'o', 'u' , 'y'] ) THEN
+counter_vowels:= counter_vowels +1;
         END_IF
     i:=i+1;
     END_WHILE
     Write (counter_caracters)
     Write (counter_words)
     Write (counter_vowels)
+  //Write (counter_vowels)
 END
+.
